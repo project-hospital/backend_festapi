@@ -1,14 +1,10 @@
 from fastapi import APIRouter, Query
 from typing import List
-from pydantic import BaseModel
 
 import pandas as pd
-import io
 
-# Excel 파일 경로
 file_path = 'datas/1.병원정보서비스.xlsx'
 
-# Excel 파일 읽기
 df = pd.read_excel(file_path)
 
 df.rename(columns={
@@ -61,6 +57,9 @@ router = APIRouter()
 
 @router.get(
     "/hospital",
+    tags=["병원 조회"],
+    summary="병원 정보 조회",
+    description="병원 정보를 조회합니다",
     response_model=List[dict])
 async def read_items(
         page: int = Query(1, ge=1),
