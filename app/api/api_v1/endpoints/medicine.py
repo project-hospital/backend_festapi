@@ -29,6 +29,9 @@ router = APIRouter()
 
 @router.get(
     "/medicine",
+    tags=["약국 조회"],
+    summary="약국 정보 조회",
+    description="약국 정보를 조회합니다",
     response_model=List[dict])
 async def read_items(
         page: int = Query(1, ge=1),
