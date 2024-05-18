@@ -46,3 +46,37 @@ async def uploadImage(file: UploadFile = File(...)):
     )
 
     return image
+
+@router.get(
+    "/image/{image_id}",
+    tags=["이미지 다운로드"],
+    summary="이미지 다운로드",
+    description="이미지를 다운로드합니다",
+    response_model=Image)
+async def downloadImage(image_id: str):
+    image = Image(
+        id=image_id,
+        name="sample.jpg",
+        path="assets/sample.jpg",
+        fileExtension="jpg",
+        createTime=datetime.now().isoformat()
+    )
+    return image
+
+@router.delete(
+    "/image/{image_id}",
+    tags=["이미지 삭제"],
+    summary="이미지 삭제",
+    description="이미지를 삭제합니다",
+    response_model=Image)
+async def deleteImage(image_id: str):
+    image = Image(
+        id=image_id,
+        name="sample.jpg",
+        path="assets/sample.jpg",
+        fileExtension="jpg",
+        createTime=datetime.now().isoformat()
+    )
+
+    return image
+
