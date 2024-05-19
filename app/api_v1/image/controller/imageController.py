@@ -47,6 +47,7 @@ async def uploadImage(file: UploadFile = File(...)):
 
     return image
 
+
 @router.get(
     "/image/{image_id}",
     tags=["이미지 다운로드"],
@@ -62,6 +63,7 @@ async def downloadImage(image_id: str):
         createTime=datetime.now().isoformat()
     )
     return image
+
 
 @router.delete(
     "/image/{image_id}",
@@ -79,4 +81,3 @@ async def deleteImage(image_id: str):
     )
 
     return image
-

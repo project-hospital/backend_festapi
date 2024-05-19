@@ -4,17 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e504de21-163e-42ac-bbfc-cabfa6bb32d8" name="Changes" comment="setting : connect database">
-      <change afterPath="$PROJECT_DIR$/app/api/api_v1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/api_v1/domain/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/api_v1/domain/model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/api_v1/domain/model/image/ImageModel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/api_v1/domain/model/image/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/api_v1/domain/schema/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/api_v1/domain/schema/image/ImageSchema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/api/api_v1/domain/schema/image/__init__.py" afterDir="false" />
+    <list default="true" id="e504de21-163e-42ac-bbfc-cabfa6bb32d8" name="Changes" comment="setting : add model">
+      <change afterPath="$PROJECT_DIR$/app/api_v1/image/dao/image_dao.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api_v1/image/domain/model/image/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api_v1/image/domain/schema/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api_v1/image/domain/schema/image/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api_v1/image/service/Image/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api_v1/image/service/Image/image_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api_v1/image/service/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/api_v1/endpoints/image.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/api_v1/endpoints/imageController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/endpoints/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/domain/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/domain/model/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/controller/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/domain/model/image/ImageModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/domain/model/image/ImageModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/domain/model/image/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/dao/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/domain/schema/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/domain/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/domain/schema/image/ImageSchema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/domain/schema/image/ImageSchema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/domain/schema/image/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/domain/model/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/endpoints/getOpenApiData.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/endpoints/getOpenApiData.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/endpoints/hospital.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/endpoints/hospital.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/endpoints/imageController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/controller/imageController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/endpoints/medicine.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/endpoints/medicine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/endpoints/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/endpoints/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/api_v1/routers.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/routers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,10 +97,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/api/api_v1/domain/model" />
       <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/app/api/api_v1/image" />
+      <recent name="$PROJECT_DIR$/app/api/api_v1/image/controller" />
+      <recent name="$PROJECT_DIR$/app/api/api_v1/domain/model" />
       <recent name="$PROJECT_DIR$/app/config" />
-      <recent name="$PROJECT_DIR$/datas" />
     </key>
   </component>
   <component name="RunManager" selected="FastAPI.hospital">
@@ -185,7 +199,7 @@
       <workItem from="1713696706247" duration="1021000" />
       <workItem from="1713697739332" duration="1236000" />
       <workItem from="1714774419731" duration="15018000" />
-      <workItem from="1715998699610" duration="7896000" />
+      <workItem from="1715998699610" duration="10597000" />
     </task>
     <task id="LOCAL-00001" summary="First settings">
       <option name="closed" value="true" />
@@ -251,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716036953883</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="setting : add model">
+      <option name="closed" value="true" />
+      <created>1716082150953</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1716082150953</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -276,7 +298,8 @@
     <MESSAGE value="feat : add file upload api" />
     <MESSAGE value="docs : add docker file" />
     <MESSAGE value="setting : connect database" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting : connect database" />
+    <MESSAGE value="setting : add model" />
+    <option name="LAST_COMMIT_MESSAGE" value="setting : add model" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/hospital$hospital.coverage" NAME="hospital Coverage Results" MODIFIED="1716082082251" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

@@ -1,9 +1,8 @@
 from fastapi import FastAPI
-from app.api.api_v1.endpoints import users, hospital, medicine, imageController
-from app.api.api_v1.endpoints.getOpenApiData import router as openapi_router
+from app.api_v1.endpoints import hospital, medicine, users
+from app.api_v1.image.controller import imageController
+from app.api_v1.endpoints.getOpenApiData import router as openapi_router
 from app.config.databaseConfig import database, engine, Base
-from app.api.api_v1.domain.model.image.ImageModel import Image
-
 
 app = FastAPI()
 

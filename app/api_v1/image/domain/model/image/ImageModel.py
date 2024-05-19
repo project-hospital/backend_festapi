@@ -9,6 +9,8 @@ class Image(Base):
     filename = Column(String, unique=True, index=True, nullable=False)
     url = Column(Text, nullable=False)
     description = Column(Text, nullable=True)
+    fileExtension = Column(String, nullable=False)
+    createTime = Column(String, nullable=False)
 
     def __repr__(self):
         return f"<Image(id={self.id}, filename={self.filename}, url={self.url}, description={self.description})>"
