@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Text
-from app.config.databaseConfig import Base
+from app.configs.databaseConfig import Base
 
 
 class Image(Base):
@@ -9,8 +9,9 @@ class Image(Base):
     filename = Column(String, unique=True, index=True, nullable=False)
     url = Column(Text, nullable=False)
     description = Column(Text, nullable=True)
-    fileExtension = Column(String, nullable=False)
-    createTime = Column(String, nullable=False)
+    file_extension = Column(String, nullable=True)
+    create_time = Column(String, nullable=True)
 
     def __repr__(self):
-        return f"<Image(id={self.id}, filename={self.filename}, url={self.url}, description={self.description})>"
+        return (f"<Image(id={self.id}, filename={self.filename}, url={self.url}, description={self.description}, "
+                f"file_extension={self.file_extension}), create_time{self.create_time}>")

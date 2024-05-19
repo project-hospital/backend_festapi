@@ -1,8 +1,7 @@
 from typing import List, Optional
-from sqlalchemy.ext.asyncio import AsyncSession
-from app.api_v1.image.dao.image_dao import ImageDao  # Ensure this matches the class name
+from app.api_v1.image.dao.image_dao import ImageDao
 from app.api_v1.image.domain.model.image.ImageModel import Image
-
+from sqlalchemy.ext.asyncio import AsyncSession
 
 class ImageService:
     def __init__(self, db_session: AsyncSession):
