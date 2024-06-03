@@ -4,23 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e504de21-163e-42ac-bbfc-cabfa6bb32d8" name="Changes" comment="refactor : modify dir path and refactor application to mvc arch">
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/image/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/image/test_image.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_image_dao.py" afterDir="false" />
+    <list default="true" id="e504de21-163e-42ac-bbfc-cabfa6bb32d8" name="Changes" comment="refactor : modify dir path and refactor application to path and database settings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/.env" beforeDir="false" afterPath="$PROJECT_DIR$/app/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api_v1/endpoints/getOpenApiData.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/endpoints/getOpenApiData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/api_v1/image/controller/imageController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/controller/imageController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api_v1/image/dao/image_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/dao/image_dao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api_v1/image/domain/model/image/ImageModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/domain/model/image/ImageModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api_v1/image/domain/schema/image/ImageSchema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/domain/schema/image/ImageSchema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api_v1/image/service/Image/image_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/service/Image/image_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/configration.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/databaseConfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/configs/databaseConfig.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_main.http" beforeDir="false" afterPath="$PROJECT_DIR$/test_main.http" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "database",
+    "ignore_missing_gitignore": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -226,7 +215,9 @@
       <workItem from="1713696706247" duration="1021000" />
       <workItem from="1713697739332" duration="1236000" />
       <workItem from="1714774419731" duration="15018000" />
-      <workItem from="1715998699610" duration="21906000" />
+      <workItem from="1715998699610" duration="26022000" />
+      <workItem from="1717418549637" duration="213000" />
+      <workItem from="1717418770678" duration="1947000" />
     </task>
     <task id="LOCAL-00001" summary="First settings">
       <option name="closed" value="true" />
@@ -308,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716085349413</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="refactor : modify dir path and refactor application to path and database settings">
+      <option name="closed" value="true" />
+      <created>1716125262000</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716125262000</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -335,10 +334,11 @@
     <MESSAGE value="setting : connect database" />
     <MESSAGE value="setting : add model" />
     <MESSAGE value="refactor : modify dir path and refactor application to mvc arch" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor : modify dir path and refactor application to mvc arch" />
+    <MESSAGE value="refactor : modify dir path and refactor application to path and database settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor : modify dir path and refactor application to path and database settings" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/hospital$.coverage" NAME=" Coverage Results" MODIFIED="1716124239500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/dbconnection" />
-    <SUITE FILE_PATH="coverage/hospital$hospital.coverage" NAME="hospital Coverage Results" MODIFIED="1716125054004" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/hospital$hospital.coverage" NAME="hospital Coverage Results" MODIFIED="1717420616790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

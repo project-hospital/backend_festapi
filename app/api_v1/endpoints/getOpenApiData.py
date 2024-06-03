@@ -14,7 +14,9 @@ API_URL = f"{base_url}?page={default_page}&perPage={default_per_page}&serviceKey
 file_path_name_yongsan = 'datas/서울특별시 용산구 외국어 가능 의료기관 및 약국 명단.xlsx'
 
 
-@router.get("/get-yongsan-open-api/", tags=["공공데이터"], summary="서울특별시 용산구 외국어 가능 의료기관 및 약국 명단",
+@router.get("/get-yongsan-open-api/",
+            tags=["공공데이터"],
+            summary="서울특별시 용산구 외국어 가능 의료기관 및 약국 명단",
             description="서울특별시 용산구의 외국어 가능 의료기관 및 약국명단을 조회한다")
 async def get_data(
         page: int = Query(1, description="페이지 번호"),

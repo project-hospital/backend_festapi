@@ -1,50 +1,61 @@
-from fastapi import APIRouter, File, UploadFile, Depends
-# from sqlalchemy.ext.asyncio import AsyncSession
-from app.configs.databaseConfig import get_db_session
-# from datetime import datetime
-# from app.api_v1.image.domain.model.image.ImageModel import image_model
-from app.api_v1.image.domain.schema.image.ImageSchema import ImageSchema
-from app.api_v1.image.service.Image.image_service import ImageService
+import os
+import uuid
 
-# import uuid
-# import os
+import aiofiles
+from fastapi import APIRouter, File, UploadFile, Depends
+
+from datetime import datetime
+from app.api_v1.image.domain.schema.image.ImageSchema import ImageSchema
+from app.api_v1.image.domain.model.image.ImageModel import Image
+from app.api_v1.image.service.Image.image_service import ImageService
+from app.configs.databaseConfig import get_db_session
 
 router = APIRouter(prefix="/images", tags=["이미지 관리"])
 
 
-# @router.post(
-#     "/image",
-#     tags=["이미지 업로드"],
-#     summary="이미지 업로드",
-#     description="이미지를 업로드하고 저장합니다",
-#     response_model=Image)
-# async def uploadImage(file: UploadFile = File(...)):
-#     image_id = str(uuid.uuid4())
-#     file_extension = file.filename.rsplit('.', 1)[-1]
-#     upload_dir = "assets/uploadImages"
-#     file_path = os.path.join(upload_dir, f"{image_id}.{file_extension}")
-#
-#     # 디렉토리가 없다면 생성
-#     if not os.path.exists(upload_dir):
-#         os.makedirs(upload_dir)
-#
-#     # 파일을 비동기적으로 저장
-#     with open(file_path, "wb") as buffer:
-#         contents = await file.read()  # 비동기적으로 파일 읽기
-#         buffer.write(contents)
-#
-#     # 이미지 객체 생성
-#     image = Image(
-#         id=image_id,
-#         filename=file.filename,
-#         url=file_path,
-#         file_extension=file_extension,
-#         createTime=datetime.now().isoformat()
-#     )
-#
-#     ImageService().create_image(image)
-#
-#     return image
+@router.post(
+    "/image",
+    tags=["이미지 업로드"],
+    summary="이미지 업로드",
+    description="이미지를 업로드하고 저장합니다",
+    response_model=ImageSchema)
+async def uploadImage(
+        db_session=Depends(get_db_session),
+        file: UploadFile = File(...)):
+    id = str(uuid.uuid4())
+    filename = file.filename
+    description = "이미지 설명"
+    file_extension = file.filename.rsplit('.', 1)[-1]
+    upload_dir = "assets/uploadImages"
+    url = os.path.join(upload_dir, f"{id}.{file_extension}")
+    create_time  = datetime.now().isoformat()
+
+    # 디렉토리가 없다면 생성
+    if not os.path.exists(upload_dir):
+        os.makedirs(upload_dir)
+
+    # 파일을 비동기적으로 저장
+    async with aiofiles.open(url, "wb") as buffer:
+        contents = await file.read()  # 비동기적으로 파일 읽기
+        await buffer.write(contents)
+
+    # 이미지 객체 생성
+    image = Image(
+        id=id,
+        filename=filename,
+        url=url,
+        description=description,
+        file_extension=file_extension,
+        create_time=create_time
+    )
+
+    # TODO : file name 중복 어떻게 처리할지 고민하기
+    image_service = ImageService(db_session=db_session)
+    image = await image_service.create_image(image.filename,
+                                             image.url,
+                                             image.description)
+
+    return image
 
 
 # @router.get(
