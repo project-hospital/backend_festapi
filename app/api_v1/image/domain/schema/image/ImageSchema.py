@@ -1,10 +1,11 @@
-# app/api_v1/image/domain/model/image/ImageSchema.py
+from uuid import UUID
+
 from pydantic import BaseModel
 from typing import Optional
 
 
 class ImageSchema(BaseModel):
-    id: Optional[int]
+    id: UUID
     filename: str
     url: str
     description: Optional[str] = None
