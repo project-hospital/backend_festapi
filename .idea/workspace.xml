@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e504de21-163e-42ac-bbfc-cabfa6bb32d8" name="Changes" comment="feat : Appending file upload api and create Image Object with fastAPI">
-      <change afterPath="$PROJECT_DIR$/http/images.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api_v1/image/controller/imageController.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/controller/imageController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api_v1/image/dao/image_dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/dao/image_dao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api_v1/image/domain/model/image/ImageModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/domain/model/image/ImageModel.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api_v1/image/domain/schema/image/ImageSchema.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/domain/schema/image/ImageSchema.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api_v1/image/service/Image/image_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/api_v1/image/service/Image/image_service.py" afterDir="false" />
-    </list>
+    <list default="true" id="e504de21-163e-42ac-bbfc-cabfa6bb32d8" name="Changes" comment="feat : image upload &amp; download &amp; delete" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -217,7 +209,7 @@
       <workItem from="1717418549637" duration="213000" />
       <workItem from="1717418770678" duration="3255000" />
       <workItem from="1717464782185" duration="54000" />
-      <workItem from="1717651964364" duration="7737000" />
+      <workItem from="1717651964364" duration="8088000" />
     </task>
     <task id="LOCAL-00001" summary="First settings">
       <option name="closed" value="true" />
@@ -315,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717420773611</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="feat : image upload &amp; download &amp; delete">
+      <option name="closed" value="true" />
+      <created>1717660037864</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717660037864</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -344,10 +344,11 @@
     <MESSAGE value="refactor : modify dir path and refactor application to mvc arch" />
     <MESSAGE value="refactor : modify dir path and refactor application to path and database settings" />
     <MESSAGE value="feat : Appending file upload api and create Image Object with fastAPI" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : Appending file upload api and create Image Object with fastAPI" />
+    <MESSAGE value="feat : image upload &amp; download &amp; delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : image upload &amp; download &amp; delete" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/hospital$.coverage" NAME=" Coverage Results" MODIFIED="1716124239500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/dbconnection" />
-    <SUITE FILE_PATH="coverage/hospital$hospital.coverage" NAME="hospital Coverage Results" MODIFIED="1717659584038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/hospital$hospital.coverage" NAME="hospital Coverage Results" MODIFIED="1717659911989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
