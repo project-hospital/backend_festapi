@@ -46,6 +46,12 @@ class Image(Base):
             create_time=create_time
         )
 
+    @classmethod
+    async def from_delete_file(cls, url: str):
+        if os.path.exists(url):
+            os.remove(url)
+
+
     def to_schema(self) -> ImageSchema:
         return ImageSchema(
             id=self.id,

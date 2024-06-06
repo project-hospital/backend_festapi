@@ -22,7 +22,6 @@ async def uploadImage(
         db_session=Depends(get_db_session),
         file: UploadFile = File(...),
         description: str = "이미지 설명") -> ImageSchema:
-
     upload_dir = "assets/uploadImages"
 
     if not os.path.exists(upload_dir):
@@ -42,7 +41,6 @@ async def uploadImage(
     description="이미지를 다운로드합니다",
     response_model=ImageSchema)
 async def downloadImage(image_id: str):
-
     return await ImageService().get_image_by_id(image_id)
 
 
@@ -53,7 +51,6 @@ async def downloadImage(image_id: str):
     description="모든 이미지 목록을 조회합니다",
     response_model=list[ImageSchema])
 async def getImagesAll(db_session=Depends(get_db_session)):
-
     return await ImageService(db_session=db_session).get_all_images()
 
 
@@ -67,4 +64,4 @@ async def deleteImage(
         image_id: str,
         db_session=Depends(get_db_session)):
 
-    return await ImageService(db_session=db_session).delete_image(image_id);
+    return await ImageService(db_session=db_session).deleteFileAndTableDate(image_id);
